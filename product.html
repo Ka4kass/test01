@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktdetails - Versity</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="./index.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./stadt.html">Städte</a></li>
+                        <li><a href="">Bundesländer</a></li>
+                        <li><a href="./about.html">Über uns</a></li>
+                    </ul>
+                </nav>
+                <div class="order-icon">
+                    <img id="openModal" class="icon" src="img/shopping-bag.png" alt="Warenkorb Icon">
+                    <span id="orderCount" class="order-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ihr Warenkorb</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Zur Kasse</button>
+                <button id="clearOrders" class="btn btn-danger">Warenkorb leeren</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <!-- This will be populated by JavaScript -->
+    </section>
+
+    <section class="container" id="faq">
+        <div class="service-section faq-section">
+            <h2 class="section-title">Produkt FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+    <h3 class="faq-question">Aus welchem Material besteht das Modell?</h3>
+    <div class="faq-answer">
+        <p>Das Stadtmodell wird aus PLA+ Kunststoff hergestellt – ein biologisch abbaubares und umweltfreundliches Material auf Maisstärkebasis. Die Rahmen bestehen aus massivem, naturbelassenem Eichenholz, das für eine hochwertige und ästhetische Optik sorgt.</p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <h3 class="faq-question">Welche Abmessungen hat das Modell?</h3>
+    <div class="faq-answer">
+        <p>Das Modell selbst misst 18x18 cm und ist im Maßstab ca. 1:3000 gefertigt. Der Holzrahmen hat eine Breite von 2 cm und eine Höhe von 3 cm, was das Gesamtbild kompakt und stilvoll für jedes Interieur macht.</p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <h3 class="faq-question">Kann ich die Farbe der Stadt oder andere Anpassungen wählen?</h3>
+    <div class="faq-answer">
+        <p>Derzeit bieten wir ausschließlich die Modelle an, wie sie in der Anzeige dargestellt sind – ohne Farb- oder Designänderungen. Wir arbeiten jedoch aktiv daran, in Zukunft weitere Materialien, Farben und Städtevarianten anzubieten.</p>
+    </div>
+</div>
+
+<div class="faq-item">
+    <h3 class="faq-question">Wie lange dauert Lieferung?</h3>
+    <div class="faq-answer">
+        <p>Da wir ein neu gegründetes Start-up sind, beträgt die Lieferzeit in der Regel zwischen 2 und 5 Tagen. Der Druckprozess selbst nimmt Zeit in Anspruch, ebenso wie die Lieferung der handgefertigten Holzrahmen. Wir bemühen uns, die Abläufe stetig zu optimieren.</p>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar Products Section -->
+    <section class="similar-products">
+        <div class="container">
+            <h2>Das könnte Ihnen auch gefallen</h2>
+            <div class="product-selection">
+                <!-- This will be populated by JavaScript with similar products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Versity</h3>
+                    <p>Handgefertigte Mini-Stadtmodelle aus Deutschland – ökologisch, ästhetisch, einzigartig.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stadt.html">Produkte</a></li>
+                        <li><a href="index.html">Regionen</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="about.html#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundenservice</h3>
+                    <ul>
+                        <li><a href="about.html#faq">FAQ</a></li>
+                        <li><a href="about.html#shipping">Versand</a></li>
+                        <li><a href="about.html#return">Rückgaben</a></li>
+                        <li><a href="about.html#payment">Zahlungsmethoden</a></li>
+                        <div>
+                            <li>
+                               <a href="datenschutzerklärung.html" class="datenschutz">datenschutzerklärung |</a>
+                               <a href="impressum.html" class="datenschutz"> impressum</a>
+                            </li>
+
+                        </div>
+
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:infoversity.de@gmail.com">infoversity.de@gmail.com</a></li>
+                        <li>Telefon: <a href="tel:+491743164181">+49 017 43164181</a></li>
+                        <li>
+                            <a href="https://www.instagram.com/versity_store?igsh=MXAycnNnZDM2NHk5cQ==">
+                            <img src="./img/iconmonstr-instagram-11.svg" alt="" class="icon" style="height: 15px;"></a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Notification element -->
+    <script src="js/tets2.js"></script>
+
+    <div id="notification" class="notification"></div>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>

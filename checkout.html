@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellung</title>
+    <link rel="stylesheet" href="./css/main.css">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- Your original scripts -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stadt.html">Städte</a></li>
+                        <li><a href="">Bundesländer</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний контейнер -->
+    <div class="checkout-wrapper">
+        <div class="checkout-container">
+            <h1>1. Ihre Bestellung</h1>
+            
+            <div class="order-summary">
+                <h3>Bestellübersicht</h3>
+                        <ul id="order-items">
+                    <!-- Товари будуть додані через JavaScript -->
+                </ul>
+                <p class="total-amount">Gesamt: <span id="total-price">0,00</span></p>
+            </div>
+            <h1 class="checkout">2. Lieferadresse</h1>
+
+            <form id="checkoutForm">
+                <div class="form-row">
+    <input type="text" id="first-name" name="first-name" placeholder="Vorname" required>
+    <input type="text" id="last-name" name="last-name" placeholder="Nachname" required>
+</div>
+
+<div class="form-row">
+    <input type="email" id="email" name="email" placeholder="E-Mail-Adresse" required>
+    <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
+</div>
+
+<div class="form-row">
+    <input type="text" id="address1" name="address1" placeholder="Adresszeile" required>
+</div>
+                
+
+<div class="form-row">
+    <input type="text" id="postal-code" name="postal-code" placeholder="Postleitzahl" required>
+    <select id="country" name="country">
+        <option value="">Land auswählen</option>
+        <option value="Austria">🇦🇹 Österreich</option>
+        <option value="Belgium">🇧🇪 Belgien</option>
+        <option value="Bulgaria">🇧🇬 Bulgarien</option>
+        <option value="Croatia">🇭🇷 Kroatien</option>
+        <option value="Cyprus">🇨🇾 Zypern</option>
+        <option value="Czech Republic">🇨🇿 Tschechien</option>
+        <option value="Denmark">🇩🇰 Dänemark</option>
+        <option value="Estonia">🇪🇪 Estland</option>
+        <option value="Finland">🇫🇮 Finnland</option>
+        <option value="France">🇫🇷 Frankreich</option>
+        <option value="Germany" selected>🇩🇪 Deutschland</option>
+        <option value="Greece">🇬🇷 Griechenland</option>
+        <option value="Hungary">🇭🇺 Ungarn</option>
+        <option value="Ireland">🇮🇪 Irland</option>
+        <option value="Italy">🇮🇹 Italien</option>
+        <option value="Latvia">🇱🇻 Lettland</option>
+        <option value="Lithuania">🇱🇹 Litauen</option>
+        <option value="Luxembourg">🇱🇺 Luxemburg</option>
+        <option value="Malta">🇲🇹 Malta</option>
+        <option value="Netherlands">🇳🇱 Niederlande</option>
+        <option value="Poland">🇵🇱 Polen</option>
+        <option value="Portugal">🇵🇹 Portugal</option>
+        <option value="Romania">🇷🇴 Rumänien</option>
+        <option value="Slovakia">🇸🇰 Slowakei</option>
+        <option value="Slovenia">🇸🇮 Slowenien</option>
+        <option value="Spain">🇪🇸 Spanien</option>
+        <option value="Sweden">🇸🇪 Schweden</option>
+    </select>
+</div>  
+
+                <!-- Вибір способу оплати -->
+                <div class="form-group">
+                    <label for="payment-method">Zahlungsmethode:</label>
+                    <select id="payment-method" name="payment-method" class="payment-select">
+                        <option value="card">💳 Kredit-/Debitkarte</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn" id="checkoutButton">Jetzt bestellen</button>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Versity</h3>
+                    <p>Handgefertigte Mini-Stadtmodelle aus Deutschland – ökologisch, ästhetisch, einzigartig.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stadt.html">Produkte</a></li>
+                        <li><a href="index.html">Regionen</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="about.html#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundenservice</h3>
+                    <ul>
+                        <li><a href="about.html#faq">FAQ</a></li>
+                        <li><a href="about.html#shipping">Versand</a></li>
+                        <li><a href="about.html#return">Rückgaben</a></li>
+                        <li><a href="about.html#payment">Zahlungsmethoden</a></li>
+                        <div>
+                            <li>
+                               <a href="datenschutzerklärung.html" class="datenschutz">datenschutzerklärung |</a>
+                               <a href="impressum.html" class="datenschutz"> impressum</a>
+                            </li>
+
+                        </div>
+
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:infoversity.de@gmail.com">infoversity.de@gmail.com</a></li>
+                        <li>Telefon: <a href="tel:+491743164181">+49 017 43164181</a></li>
+                        <li>
+                            <a href="https://www.instagram.com/versity_store?igsh=MXAycnNnZDM2NHk5cQ==">
+                            <img src="./img/iconmonstr-instagram-11.svg" alt="" class="icon" style="height: 15px;"></a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("checkoutForm");
+    const button = document.getElementById("checkoutButton");
+    const inputs = form.querySelectorAll("input[required], select[required], select");
+
+    // Initially disable the button
+    button.disabled = true;
+    button.style.opacity = "0.5"; // makes button look disabled
+
+    function checkForm() {
+        let allFilled = true;
+
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                allFilled = false;
+            }
+        });
+
+        button.disabled = !allFilled;
+        button.style.opacity = allFilled ? "1" : "0.5";
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener("input", checkForm);
+        input.addEventListener("change", checkForm);
+    });
+});
+
+        </script>
+        <!-- Підключення EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</script>
+
+
+
+    </footer>
+    
+    <!-- Your original scripts -->
+    <!-- EmailJS custom script -->
+    <script src="js/checkout.js"></script>    <!-- ✅ Другий --> 
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Städte</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Versity</a>
+                <button class="nav-toggle">☰</button>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stadt.html">Städte</a></li>
+                        <li><a href="">Bundesländer</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+
+
+                    </ul>
+                </nav>
+                <div class="order-icon">
+                    <img id="openModal" class="icon" src="img/shopping-bag.png" alt="Order Icon">
+                    <span id="orderCount" class="order-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-button">&times;</button>
+            
+            <h2>Ihr Warenkorb</h2>
+            <div id="orderList" class="order-list"></div>
+            <p id="orderTotal" class="order-total">Summe: 0,00 €</p>
+            
+            <div class="modal-buttons">
+                <button id="continueOrder" class="btn btn-primary">Zur Kasse</button>
+                <button id="clearOrders" class="btn btn-danger">Warenkorb leeren</button>
+            </div>
+        </div>
+    </div>
+<section class="container">
+    <h1>Städte in <span id="region-name"></span></h1>
+    <div id="cities-list" class="cities-grid"></div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Versity</h3>
+                    <p>Handgefertigte Mini-Stadtmodelle aus Deutschland – ökologisch, ästhetisch, einzigartig.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stadt.html">Produkte</a></li>
+                        <li><a href="index.html">Regionen</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="about.html#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundenservice</h3>
+                    <ul>
+                        <li><a href="about.html#faq">FAQ</a></li>
+                        <li><a href="about.html#shipping">Versand</a></li>
+                        <li><a href="about.html#return">Rückgaben</a></li>
+                        <li><a href="about.html#payment">Zahlungsmethoden</a></li>
+                        <div>
+                            <li>
+                               <a href="datenschutzerklärung.html" class="datenschutz">datenschutzerklärung |</a>
+                               <a href="impressum.html" class="datenschutz"> impressum</a>
+                            </li>
+
+                        </div>
+
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:infoversity.de@gmail.com">infoversity.de@gmail.com</a></li>
+                        <li>Telefon: <a href="tel:+491743164181">+49 017 43164181</a></li>
+                        <li>
+                            <a href="https://www.instagram.com/versity_store?igsh=MXAycnNnZDM2NHk5cQ==">
+                            <img src="./img/iconmonstr-instagram-11.svg" alt="" class="icon" style="height: 15px;"></a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Versity. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="js/slider.js"></script>
+    <script src="js/icon.js"></script>
+
+</body>
+</html>
